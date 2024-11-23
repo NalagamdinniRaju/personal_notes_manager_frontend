@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaSearch, FaFolder, FaPlus } from 'react-icons/fa';
 import { useNoteContext } from '../../context/NoteContext';
+import { FcFilledFilter } from "react-icons/fc";
 import './SearchBar.css';
 
 const SearchBar = () => {
@@ -28,7 +29,7 @@ const SearchBar = () => {
 
       <div className="filter-group">
         <div className="filter-item">
-          <FaFolder className="filter-icon" />
+          <FcFilledFilter className="filter-icon" />
           <select
             value={filters.category}
             onChange={(e) => setFilters({ ...filters, category: e.target.value })}
